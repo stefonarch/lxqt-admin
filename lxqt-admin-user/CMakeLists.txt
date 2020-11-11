@@ -30,6 +30,8 @@ qt5_wrap_cpp(MOCS ${lxqt-admin-user_MOCS})
 qt5_wrap_ui(UIS ${lxqt-admin-user_UIS})
 
 # Translations **********************************
+
+execute_process(COMMAND lxqt-ts2desktop WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/lxqt-admin-user)
 lxqt_translate_ts(lxqt-admin-user_QM_FILES
     UPDATE_TRANSLATIONS ${UPDATE_TRANSLATIONS}
     SOURCES

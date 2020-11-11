@@ -40,6 +40,8 @@ qt5_wrap_cpp(MOCS ${lxqt-admin-time_MOCS})
 qt5_wrap_ui(UIS ${lxqt-admin-time_UIS})
 
 # Translations **********************************
+execute_process(COMMAND lxqt-ts2desktop WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/lxqt-admin-time)
+
 lxqt_translate_ts(lxqt-admin-time_QM_FILES
     UPDATE_TRANSLATIONS ${UPDATE_TRANSLATIONS}
     SOURCES
